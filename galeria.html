@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1f3d2b">
+  <title>Galeria — Horizontes | Fatec Itu</title>
+  <meta name="description" content="Galeria completa das fotografias do pôr do sol na Fatec Itu, com lightbox e filtros por categoria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="nav" role="banner">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html" aria-label="Horizontes — Página inicial">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span>Horizontes</span>
+      </a>
+      <nav class="nav__links" data-nav-links aria-label="Navegação principal">
+        <a class="nav__link" href="index.html">Início</a>
+        <a class="nav__link" href="galeria.html" aria-current="page">Galeria</a>
+        <a class="nav__link" href="sobre.html">Sobre o projeto</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" data-theme-toggle type="button" aria-label="Alternar tema">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <button class="icon-btn nav__toggle" data-nav-toggle type="button" aria-label="Abrir menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <nav class="crumbs reveal" aria-label="Você está em">
+          <a href="index.html">Início</a> <span aria-hidden="true">/</span>
+          <span aria-current="page">Galeria</span>
+        </nav>
+
+        <header class="section-head reveal">
+          <span class="eyebrow">Coleção completa</span>
+          <h1 style="font-size: clamp(2rem, 3vw + 1rem, 3.6rem);">Pôr do sol na Fatec.</h1>
+          <p>Vinte registros do entardecer no campus e seu entorno. Clique em qualquer foto para ampliar e navegar entre as imagens.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filtrar por categoria">
+          <button class="chip" data-filter="all" aria-pressed="true" type="button">Todas</button>
+        </div>
+
+        <div class="gallery reveal" data-gallery aria-label="Galeria fotográfica"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-label="Visualização ampliada" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+    </button>
+    <div class="lightbox__stage">
+      <button class="lightbox__btn lightbox__btn--prev" type="button" aria-label="Foto anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <div>
+        <img src="" alt="">
+        <div class="lightbox__caption"></div>
+        <div class="lightbox__counter"></div>
+      </div>
+      <button class="lightbox__btn lightbox__btn--next" type="button" aria-label="Próxima foto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="brand__mark" aria-hidden="true"></span>
+            <span>Horizontes</span>
+          </a>
+          <p style="margin-top:1rem; max-width: 36ch;">Portfólio fotográfico sobre o meio ambiente, produzido por estudantes da Fatec Itu.</p>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <a href="index.html">Início</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="sobre.html">Sobre o projeto</a>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <a href="mailto:contato.portifolio@gmail.com">contato.portifolio@gmail.com</a>
+          <a href="sobre.html#equipe">Conhecer a equipe</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span data-year></span> Horizontes · Fatec Itu</span>
+        <span>Feito com cuidado, em homenagem ao planeta.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
